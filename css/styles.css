@@ -1,0 +1,26 @@
+/*
+Created by Sarah Koziol.
+Validiert mit http://jigsaw.w3.org/css-validator/#validate_by_input
+ */
+body {
+    background-color: #EFEFEF;
+    margin: 8px;
+}
+
+thead td {
+    text-decoration: underline;
+}
+
+#map {
+    width: 800px;
+    height: 500px;
+}
+
+.headline {
+    font-size: 1.6em;
+    max-width: 60ch;
+}
+
+.hidden {
+    display: none;
+}

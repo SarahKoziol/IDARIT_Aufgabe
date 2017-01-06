@@ -3,20 +3,65 @@
 <head>
     <meta name="author" content="Sarah Koziol">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="vendor/normalize/normalize.css"><!-- Normalisierung diverser Eigenschaften, auch eine Art Standard -->
     <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="vendor/jquery/jquery-3.1.1.min.js"></script>
     <script src="vendor/leaflet/leaflet.js"></script>
-    <!-- ToDo: Highchart (?) -->
     <script src="js/app.js"></script>
+    <!-- Markup validiert mit https://validator.w3.org/#validate_by_input -->
     <title>Archäologische Ausgrabungen und mitwirkende Personen</title>
 </head>
 <body>
-    <h1>Welche räumliche Verteilung der archäologischen Grabungen ist vorhanden und welche Personen haben an ihnen mitgewirkt?</h1>
-    <div id="map" style="width: 800px; height: 500px"></div><!-- TODO dirty css -->
+    <h1 class="headline">Welche räumliche Verteilung der archäologischen Grabungen ist vorhanden und welche Personen haben an ihnen mitgewirkt?</h1>
+    <div id="map"></div>
     <div id="personInfo">
-        <div class="ownInfo"></div>
-        <div class="gndInfo"></div>
-        <div class="dbpediaInfo"></div>
+        <h2>Informationen zur Person</h2>
+        <div class="no-person">
+            Keine Person gewählt.
+        </div>
+        <div class="ownInfo hidden">
+            <h3>Informationen aus eigenem Datensatz</h3>
+            <table>
+                <thead>
+                <tr>
+                    <td>Key</td>
+                    <td>Value</td>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="gndInfo hidden">
+            <h3>Informationen der DNB (GND)</h3>
+            <table>
+                <thead>
+                <tr>
+                    <td>Key</td>
+                    <td>Value</td>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="no-info">
+                Kein Eintrag vorhanden.
+            </div>
+        </div>
+        <div class="dbpediaInfo hidden">
+            <h3>Informationen von DBpedia</h3>
+            <table>
+                <thead>
+                <tr>
+                    <td>Key</td>
+                    <td>Value</td>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="no-info">
+                Kein Eintrag vorhanden.
+            </div>
+        </div>
     </div>
 </body>
 </html>
